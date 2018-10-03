@@ -1,0 +1,25 @@
+<html>
+	<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+
+	</head>
+	<body>
+
+
+
+
+</div>
+<div>
+<h1>Courses</h1>
+
+<a href = "#"> <p>{{course.name}}</p></a>
+<p>{{course.description}}</p>
+<a href = "{{course.link}}"><p>Start Cource</p>
+<p><a href = "{{url_for('edit_course',category_id = course.category.id,course_id=course.id)}}">Edit Restaurant</a></p>
+
+<p> <a href = "{{url_for('delete_course',category_id = course.category.id,course_id=course.id)}}">Delete Restaurant</a> </p>
+
+
+</div>
+	</body>
+</html>

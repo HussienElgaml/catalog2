@@ -1,0 +1,32 @@
+<html>
+
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+
+	</head>
+
+<body><h1> Edit Course {{course.name}} </h1>
+
+<form action="{{ url_for('edit_course',category_id = category_id, course_id=course.id)}}" method = 'post'>
+
+
+	<p>Name:</p>
+		<input type ='text' size='30' name='name' placeholder = '{{course.name }}'>
+	<p>Description:</p>
+		<input type ='text' size='30' name='description' placeholder = '{{course.description}}'>
+	<p>Link:</p>
+		<input type ='text' size='250' name='link' placeholder = '{{course.link}}'>
+	<p>Photo URL</p>
+		<input type ='text' size='250' name='photo_url' placeholder = '{{course.photo_url}}'>
+
+
+<input type='submit' value='Edit'>
+
+
+<a href = '{{url_for('show_courses', category_id = course.category_id)}}'> Cancel </a>
+
+
+</form>
+</body>
+</html>
+
